@@ -6,8 +6,8 @@ console.log(random);
 let click = true;
 
 allBox.forEach((element, index) => {
-  if (click) {
-    element.addEventListener("click", () => {
+  element.addEventListener("click", () => {
+    if (click) {
       if (index === random) {
         element.style.background = "red";
         let div = document.createElement("div");
@@ -20,6 +20,6 @@ allBox.forEach((element, index) => {
       } else {
         element.style.background = "green";
       }
-    });
-  }
+    }
+  });
 });
